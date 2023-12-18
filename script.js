@@ -1,9 +1,13 @@
-$(document).ready(function () {
+$(document).ready(() => {
+  const f_name = prompt("What does Vasu like to call you?");
+  const name_element = document.getElementById("friend_name");
+  name_element.innerText = `Dear ${f_name}`;
+
   // smooth scrolling for anchor links
   $('a[href^="#"]').on("click", function (e) {
     e.preventDefault();
 
-    var target = this.hash;
+    const target = this.hash;
     $("html, body").animate(
       {
         scrollTop: $(target).offset().top,
@@ -12,28 +16,27 @@ $(document).ready(function () {
     );
   });
 
-  //   Photo gallery lightbox
-
+  // Photo gallery lightbox
   $(".photo-container img").on("click", function () {
-    var imageUrl = $(this).attr("src");
-    var imageAlt = $(this).attr("alt");
+    const imageUrl = $(this).attr("src");
+    const imageAlt = $(this).attr("alt");
 
-    var lightboxContent = `
-    <div class = "lightbox">
-        <img src = "${imageUrl}" alt = "${imageAlt}"/>
-        <span class = "close">&times;</span>
-    </div>
-    `;
+    const lightboxContent = `
+      <div class="lightbox">
+          <img src="${imageUrl}" alt="${imageAlt}"/>
+          <span class="close">&times;</span>
+      </div>
+      `;
     $("body").append(lightboxContent);
   });
 
-  //   Add responsiveness to the navigation menu
-  $(".menu-icon").on("click", function () {
+  // Add responsiveness to the navigation menu
+  $(".menu-icon").on("click", () => {
     $("nav").toggleClass("show");
   });
 
-  //   event listener for random play button click
-  var audioFiles = [
+  // event listener for random play button click
+  const audioFiles = [
     {
       src: "./Assets/Audio/01_nuvve_leni_nenu.mp3",
       image: "./Assets/Images/Nuvve leni nenu.jpeg",
@@ -60,10 +63,10 @@ $(document).ready(function () {
       title: "Sapta sagaralu",
     },
   ];
-  $("#playRandom").on("click", function () {
-    var randomIndex = Math.floor(Math.random() * audioFiles.length);
-    console.log(randomIndex);
-    var randomAudio = audioFiles[randomIndex];
+
+  $("#playRandom").on("click", () => {
+    const randomIndex = Math.floor(Math.random() * audioFiles.length);
+    const randomAudio = audioFiles[randomIndex];
 
     $("#audioPlayer").attr("src", randomAudio.src);
     $("#songImage").attr("src", randomAudio.image);
