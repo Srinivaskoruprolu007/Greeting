@@ -37,10 +37,23 @@
 
     <section class="music">
       <!-- Music Player Goes here.. -->
-      <h2>Feel-Good Playlist</h2>
+      <h2>Favorite Music</h2>
+      <div class="song-info">
+        <img
+          id="songImage"
+          src="./Assets/Images/Saptha_sagaralu.jpg"
+          alt="Saptha_sagaralu"
+        />
+        <h3 id="songTitle">Song Title</h3>
+        <audio id="audioPlayer" controls>
+          <source
+            src="./Assets/Audio/01_nuvve_leni_nenu.mp3"
+            type="audio/mp3"
+          />
+        </audio>
+      </div>
 
-      <iframe src="" frameborder="0" allowfullscreen></iframe>
-      <!-- choose a best playlist -->
+      <button id="playRandom">Play Random</button>
     </section>
 
     <section id="card" class="card">

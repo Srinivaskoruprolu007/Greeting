@@ -43,6 +43,7 @@ nav a:hover {
 }
 
 .message {
+    text-align: center;
   padding: 20px;
 }
 
@@ -55,6 +56,15 @@ blockquote {
   /* Add styling for music section */
   text-align: center;
   padding: 20px;
+}
+.song-info{
+    margin-top: 20px;
+}
+
+#songImage{
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 #audioPlayer {
@@ -111,7 +121,7 @@ footer {
   padding: 10px;
   background-color: #4285f4;
   color: #fff;
-  position: fixed;
+  position: relative;
   width: 100%;
   bottom: 0;
 }
