@@ -1,0 +1,48 @@
+body{
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header{
+    text-align: center;
+    padding: 20px;
+    background-color: #4285f4;
+    color: #fff;
+}
+.gallery{
+    /* Adding styles for the photo gallery section */
+}
+
+.message{
+    padding: 20px;
+}
+
+blockquote{
+    font-style: italic;
+    color: #555;
+}
+
+.music{
+    /* Add styling for music section */
+}
+
+.card{
+    /* Add styling for card section */
+}
+
+.animations{
+    /* Add stylings for animations */
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #4285f4;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
